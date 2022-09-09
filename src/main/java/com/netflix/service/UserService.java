@@ -94,6 +94,7 @@ public class UserService {
             if(otpDTO!=null){
                 userAccessor.updatePhoneVerificationStatus(userDTO.getUserId(), PhoneVerificationStatus.VERIFIED);
                 otpAccessor.updateOtpStatus(otpDTO.getOtpId(),OtpState.USED);
+
             }
             else{
                 throw new InvalidDataException("Otp does not exist");
